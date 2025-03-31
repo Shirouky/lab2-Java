@@ -29,9 +29,6 @@ public class Creation extends JFrame {
         JLabel nameLabel = new JLabel("Name");
         add(nameLabel);
         add(name);
-        JButton createButton = new JButton("Create");
-        add(createButton);
-        createButton.addActionListener(new CreateEvent());
 
         GridLayout layout = new GridLayout(4, 3);
         setLayout(layout);
@@ -53,7 +50,9 @@ public class Creation extends JFrame {
 
             this.types.add(radioButton);
         }
-
+        JButton createButton = new JButton("Create");
+        add(createButton);
+        createButton.addActionListener(new CreateEvent());
         var backgroundColor = new Color(89, 60, 42);
         getContentPane().setBackground(backgroundColor);
 
