@@ -1,7 +1,6 @@
 package factory;
 
 import com.github.javafaker.Faker;
-import gear.factory.MistyMountainsGearFactory;
 import gear.factory.MordorGearFactory;
 import ork.OrkBuilder;
 import ork.Tribe;

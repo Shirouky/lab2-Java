@@ -18,6 +18,7 @@ public class Tree extends JFrame {
     ArrayList<DefaultMutableTreeNode> nodes;
     private final Controller controller;
     private final HashMap<String, ArrayList<Ork>> orks = new HashMap<>();
+    JTree tree;
 
     public Tree(Controller controller) {
         var textColor = new Color(255, 0, 0);
@@ -31,7 +32,7 @@ public class Tree extends JFrame {
 
         TreeModel model = createTreeModel();
 
-        JTree tree = new JTree(model);
+        tree = new JTree(model);
         tree.addTreeSelectionListener(new SelectionListener());
 
         TreeSelectionModel selModel = new DefaultTreeSelectionModel();
@@ -78,6 +79,7 @@ public class Tree extends JFrame {
         for (DefaultMutableTreeNode node : this.nodes) {
             if (Objects.equals(node.toString(), ork.getTribe())) {
                 node.add(new DefaultMutableTreeNode(ork.getName(), false));
+                tree.updateUI();
             }
         }
     }
