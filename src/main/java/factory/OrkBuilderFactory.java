@@ -1,6 +1,6 @@
 package factory;
 
-import ork.OrkBuilder;
+import ork.builder.OrkBuilder;
 
 public interface OrkBuilderFactory {
     OrkBuilder createOrkBuilder(String name);

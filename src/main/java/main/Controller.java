@@ -4,7 +4,7 @@ import factory.DolGuldurBuilderFactory;
 import factory.MistyMountainsBuilderFactory;
 import factory.MordorBuilderFactory;
 import ork.Ork;
-import ork.OrkBuilder;
+import ork.builder.OrkBuilder;
 import ork.OrkDirector;
 import ork.Tribe;
 

@@ -1,21 +1,23 @@
-package ork;
+package ork.builder;
 
 import gear.factory.GearFactory;
 import gear.Armor;
 import gear.Banner;
 import gear.Weapon;
+import ork.Ork;
+import ork.Tribe;
 
-public class OrkBuilder implements Builder {
+public class OrkBuilder {
     private final String name;
     private Weapon weapon;
     private Armor armor;
     private Banner banner;
-    private Tribe tribe;
+    protected Tribe tribe;
 
-    private int strength;
-    private int agility;
-    private int intellect;
-    private int health;
+    protected int strength;
+    protected int agility;
+    protected int intellect;
+    protected int health;
     private final GearFactory gearFactory;
 
     public OrkBuilder(GearFactory gearFactory, String name) {
@@ -23,52 +25,37 @@ public class OrkBuilder implements Builder {
         this.name = name;
     }
 
-    @Override
-    public void setTribe(Tribe tribe) {
-        this.tribe = tribe;
+    public void setTribe() {
     }
 
-    @Override
-    public void setStrength(int strength) {
-        this.strength = strength;
+    public void setStrength() {
     }
 
-    @Override
-    public void setAgility(int agility) {
-        this.agility = agility;
+    public void setAgility() {
     }
 
-    @Override
-    public void setHealth(int health) {
-        this.health = health;
+    public void setHealth() {
     }
 
-    @Override
-    public void setIntellect(int intellect) {
-        this.intellect = intellect;
+    public void setIntellect() {
     }
 
-    @Override
     public void setWeapon() {
         this.weapon = this.gearFactory.createWeapon();
     }
 
-    @Override
     public void setLeaderWeapon() {
         this.weapon = this.gearFactory.createLeaderWeapon();
     }
 
-    @Override
     public void setScoutWeapon() {
         this.weapon = this.gearFactory.createScoutWeapon();
     }
 
-    @Override
     public void setArmor() {
         this.armor = this.gearFactory.createArmor();
     }
 
-    @Override
     public void setBanner() {
         this.banner = this.gearFactory.createBanner();
     }
