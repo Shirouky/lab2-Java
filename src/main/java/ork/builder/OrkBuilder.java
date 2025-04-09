@@ -7,7 +7,7 @@ import gear.Weapon;
 import ork.Ork;
 import ork.Tribe;
 
-public class OrkBuilder {
+public abstract class OrkBuilder {
     private final String name;
     private Weapon weapon;
     private Armor armor;
